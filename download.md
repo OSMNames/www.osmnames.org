@@ -3,4 +3,4 @@ layout: page
 title: Download
 ---
 
-# Download
+# Downloads
