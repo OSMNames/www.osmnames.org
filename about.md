@@ -7,9 +7,9 @@ title: About
 
 OSMNames project offers downloadable list of placenames derived from OpenStreetMap database.
 
-## Geocoder API
+## Place Search API
 
-These data were originally designed to feed the placename geocoding system of Klokan Technologies GmbH, Switzerland - which allows to search for a geographic location name and zoom a map to the right place. The system is available under an open-source license and can be easily installed on a custom server completely free of charge.
+These data were originally designed to feed the place search system of Klokan Technologies GmbH, Switzerland - which allows to search for a geographic location name and zoom a map to the right place. The system is available under an open-source license and can be easily installed on a custom server completely free of charge.
 
 ## Download in a simple data format
 
