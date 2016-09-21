@@ -3,15 +3,32 @@ layout: page
 title: About
 ---
 
-# About
+# About the project
 
-OSM Names project offers downloadable list of placenames derived primarily from OpenStreetMap database. Easy to use TSV (tab separated value) format simplifies handling of the community curated data with over 21 million streets, towns, cities and administrative units from every country all over the world. Complete compressed dump has about 1.5 gigabytes.
+OSMNames project offers downloadable list of placenames derived from OpenStreetMap database.
 
-Each gazetteer record comes with the coverage area (bounding box), hierarchical, precalculated rank derived from related Wikipedia page popularity, several identifiers and alternative names.
+## Geocoder API
 
-The dataset is designed for indexing by fulltext engines (for example SphinxSearch, ElasticSearch, etc) and can be applied in a geocoding service similar to the open-source Nominatim which served as a reference implementation.
+These data were originally designed to feed the placename geocoding system of Klokan Technologies GmbH, Switzerland - which allows to search for a geographic location name and zoom a map to the right place. The system is available under an open-source license and can be easily installed on a custom server completely free of charge.
 
-The first version is of the project concentrates on basic search in place names.
-Similar approach may be applied in future on POIs (points of interest), house numbers and address codes, and zip or postcodes.
+## Download in a simple data format
 
-The open-source project for generating the dataset is the result of the work of students from the University of Applied Sciences Rapperswil, Switzerland in cooperation with the company Klokan Technologies GmbH, who has also developed the open-source geocoding search system with autocomplete functionality and offers commercial support and assistance with production deployment.
+The TSV (tab separated value) data format simplifies handling of the community curated data with over 21 million streets, towns, cities and administrative units from every country all over the world. Complete compressed dump has only about 1.5 gigabytes.
+
+Every gazetteer record comes with the coverage area (bounding box), administrative hierarchy, several identifiers, alternative names and precalculated rank derived from related Wikipedia page popularity.
+
+## The fulltext indexing
+
+The dataset is optimized for indexing by fulltext search engines (such as SphinxSearch or ElasticSearch) and can power a geocoding service similar to the open-source Nominatim, which served as a reference implementation for our geocoder, especially on hierarchy and ranking.
+
+## Existing limits and future development
+
+The first version of OSMNames project concentrates on basic search in place names.
+Similar approach may be applied in the future on POIs (points of interest), house numbers and complete addresses, with zip or postcodes.
+Right now data are pre-generated which simplifies deployment and allow scalability, but the same approach and fulltext indexing system can be used against a PostgreSQL instance with nearly live updates.
+
+## Community
+
+The original OSMNames open-source project generating the dataset from OpenStreetMap is a result of the work of students (especially of Andreas Egloff) from the University of Applied Sciences Rapperswil, Switzerland and was done in cooperation with Klokan Technologies GmbH. The company team has developed the open-source geocoding search system with autocomplete functionality and offers commercial support and assistance with the production deployment.
+
+Anybody can reuse the open-source software, customize the data and adapt our workflows. We hope the community will contribute back and help us improve the geocoding database.
