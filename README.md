@@ -1,1 +1,3 @@
-# OSMnames Web
+# OSM Names project website
+
+http://osmnames.org/
