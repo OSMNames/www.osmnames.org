@@ -27,7 +27,7 @@ The file is available under the [Open Database License](https://tldrlegal.com/li
 	</div>
 </div>
 
-## Create your own country extract
+## Extract one country
 
 It is pretty easy to filter from the downloaded planet dump the records for a country of your choice. Use a command like:
 
