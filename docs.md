@@ -57,5 +57,65 @@ docker run -d -v /path/to/folder/:/data/ -p 80:80 klokantech/osmsphinx
 
 # Generate the data from raw OSM Planet
 
-Please read the complete documentation for OSMNames at http://osmnames.readthedocs.io/
+### Get Started
 
+You need a complete OSM PBF data dump either from a [country extract](http://download.geofabrik.de/index.html) or of the [entire world](http://planet.osm.org/).
+Download the data and put it into the `data` directory.
+
+```bash
+wget --directory-prefix=./data http://download.geofabrik.de/europe/switzerland-latest.osm.pbf
+```
+
+Alternatively there is a docker-compose, just edit FILE_URL in download-pbf.sh accordingly
+
+```bash
+docker-compose run download-pbf
+```
+
+Now we need to set up the database and import the data using the `import-osm` Docker container.
+
+```bash
+# This will automatically initialize the database
+docker-compose up -d postgres
+```
+
+```bash
+# Import additional wikipedia data to the ./data folder
+docker-compose run import-wikipedia
+```
+
+Create the database schema
+
+```bash
+docker-compose run schema
+```
+
+Import the pbf file from the data folder
+
+```bash
+# Import the OSM data dump from the ./data folder
+docker-compose run import-osm
+```
+
+
+We can now export the ranked geonames and their geometries.
+
+```bash
+docker-compose run export-osmnames
+```
+
+### Components
+
+The different components that attach to the `postgres` container are all located in the `src` directory of OSMNames.
+
+| Component         | Description
+|-------------------|--------------------------------------------------------------
+| postgres          | PostGIS data store for OSM data and to perform noise analysis
+| download-pbf      | automatically downloads the pbf file 
+| import-wikipedia  | Imports wikipedia data for more accurate importance calculation
+| import-osm        | Imposm3 based import tool with custom mapping to import selective OSM into the database and reconstruct it as GIS geometries, handles indexing and hierarchy reconstruction
+| export-osmnames   | Export names and their bounding boxes to TSV datasets
+| schema            | Contains views, tables, functions for the schema
+
+
+For more details please read the complete documentation of the OSMNames project at http://osmnames.readthedocs.io/
