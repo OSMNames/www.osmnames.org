@@ -5,8 +5,10 @@ title: Download
 
 # Downloads
 
-Download the pre-generated data with over 21 million place names for the whole planet. Get it now and use it in your product, website, project or private research! The data are available under
-the [Open Database License](https://tldrlegal.com/license/odc-open-database-license-(odbl)), the same license as original [OpenStreetMap](https://www.openstreetmap.org/copyright) data.
+Here you can download the pre-generated data with over 21 million place names for the whole planet.
+Feel free to use it in your next project, your website, company product or just for your private research.
+
+The file is available under the [Open Database License](https://tldrlegal.com/license/odc-open-database-license-(odbl)), the same license as the original [OpenStreetMap](https://www.openstreetmap.org/copyright) data.
 
 <div id="planet-list">
 	<div class="col12 download-item">
@@ -25,21 +27,20 @@ the [Open Database License](https://tldrlegal.com/license/odc-open-database-lice
 	</div>
 </div>
 
-
 ## Create your own country extract
 
-It is pretty easy to filter from the planet dump the records for a country of your choice.
+It is pretty easy to filter from the downloaded planet dump the records for a country of your choice. Use a command like:
 
 ```
 $ zcat planet-latest.tsv.gz | awk -F '\t' 'NR == 1 || $16 == "ch"' > extract.tsv
 ```
 
 Where "ch" is 2 letter country code according ISO-3166, in this case for Switzerland.
-Similarly you can extract only records of certain type or class, of filter on another columns.
+Similarly, it is possible to extract only records of certain type or class, of set a filter on another column.
 
 ## Data format details
 
-The data are generated in the TSV format - a tab separated spreadsheet format with one record per row. First row contains the name of columns. All characters are utf-8 encoded. The files distributed with a release are compressed with gzip. Use ungzip to extract the raw text.
+The data are generated in the TSV format - a tab separated spreadsheet file with one record per row. First row contains the name of columns. All characters are utf-8 encoded. The files distributed with a release are compressed with gzip. Use gunzip or zcat to extract the raw text.
 
 The columns has a fixed order:
 
@@ -67,5 +68,4 @@ east				bbox
 north				bbox
 wikidata			the wikidata associated with this feature
 wikipedia 			the wikipedia URL associated with this feature
-
 ```
