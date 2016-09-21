@@ -23,9 +23,9 @@ The dataset is optimized for indexing by fulltext search engines (such as Sphinx
 
 ## Existing limits and future development
 
-The first version of OSMNames project concentrates on basic search in place names.
-Similar approach may be applied in the future on POIs (points of interest), house numbers and complete addresses, with zip or postcodes.
-Right now data are pre-generated which simplifies deployment and allow scalability, but the same approach and fulltext indexing system can be used against a PostgreSQL instance with nearly live updates.
+The first version of OSMNames project provides only a basic search in place names.
+Search in POIs (points of interest), house numbers and complete addresses, with zip or postcodes may be implemented later on.
+Right now data are always pre-generated to simplify deployment and scalability, but the same fulltext search indexing system and ranking can be used against a PostgreSQL instance with nearly live updates.
 
 ## Community
 
