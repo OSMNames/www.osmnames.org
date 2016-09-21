@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+    <title>OSM Names Search - demo</title>
+    <meta name="author" content="Klokan Technologies GmbH" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.17.1/ol.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.17.1/ol.css" rel="stylesheet" />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.22.1/mapbox-gl.js"></script>
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.22.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://klokantech.github.io/javascript/kt.js"></script>
+    <link href="https://klokantech.github.io/styles/base.css" rel="stylesheet" />
+    <style>
+      body {font-family:Arial;}
+      #map-ol, #map-gl {position:absolute;top:0;left:0;right:0;bottom:0;}
+      #details {position:absolute;left:0;bottom:0;font-size:.7em;background:rgba(255,255,255,.6);}
+      input {display:inline-block;width:400px;position:absolute;top:10px;left:50%;margin-left:-200px;}
+      .ol-logo-only {display:none;}
+    </style>
+    <script>
+      var init = function () {
+        var detailsEl = document.getElementById('details');
+        var feature = new ol.Feature({
+          geometry: new ol.geom.Polygon([])
+        });
+
+        var map = new kt.VectorMap(
+                'https://klokantech.tilehosting.com/styles/basic.json?key=tX0QWNRowlarrQpqxngS',
+                'https://klokantech.tilehosting.com/styles/basic/rendered.json?key=tX0QWNRowlarrQpqxngS',
+                'map-ol', 'map-gl').getMap();
+        var autocomplete = new kt.OsmNamesAutocomplete('search', 'dgb7TgC5zR0YpsAqbEgb', true);
+
+        autocomplete.registerCallback(function (item) {
+          var isDegenerate = (item.boundingbox[2] - item.boundingbox[0]) * (item.boundingbox[3] - item.boundingbox[1]) <= 0;
+          var extent = ol.extent.applyTransform(item.boundingbox, ol.proj.getTransform('EPSG:4326', 'EPSG:3857'));
+
+          map.getView().fit(extent, map.getSize(), {
+            padding: [250, 50, 50, 50]
+          });
+          if (isDegenerate) {
+            map.getView().setZoom(20);
+          }
+          var coords = [[extent[0], extent[1]], [extent[0], extent[3]], [extent[2], extent[3]], [extent[2], extent[1]], [extent[0], extent[1]]];
+          feature.getGeometry().setCoordinates([coords], 'XY');
+          detailsEl.innerHTML = JSON.stringify(item, undefined, 2);
+        }, true);
+
+        map.addLayer(new ol.layer.Vector({
+          source: new ol.source.Vector({
+            features: [feature]
+          })
+        }));
+      };
+    </script>
+  </head>
+  <body onload="init();">
+    <div id="map-gl"></div>
+    <div id="map-ol"></div>
+    <pre id="details"></pre>
+    <form><input autocomplete="off" id="search" type="text" autofocus="autofocus" placeholder="Type here to search.." /></form>
+  </body>
+</html>
