@@ -74,6 +74,6 @@ wikipedia 			the wikipedia URL associated with this feature
 
 # Software
 
-The open-source code for generating the data is available in repository https://github.com/osmnames/osmnames
+The open-source code for generating the data is available in the repository <a href="https://github.com/osmnames/osmnames">https://github.com/osmnames/osmnames</a>
 
-The Place Search API visible on this website is implemented with the open-source OSMSphinx project available at https://github.com/klokantech/osmnames-sphinxsearch.
+The Place Search API used in this website is implemented with the open-source project available at <a href="https://github.com/klokantech/osmnames-sphinxsearch">https://github.com/klokantech/osmnames-sphinxsearch</a>.
