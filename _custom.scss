@@ -1,0 +1,12 @@
+/* For custom styles in project */
+
+.octocat{
+  margin-top: -20px;
+  margin-bottom: -10px;
+}
+
+body {font-family:Arial;}
+#map-ol, #map-gl {position:absolute;top:0;left:0;right:0;bottom:0;}
+#details {position:absolute;left:0;bottom:0;font-size:.7em;background:rgba(255,255,255,.6);}
+input {display:inline-block;width:400px;position:absolute;top:80px;left:50%;margin-left:-200px; z-index: 100;}
+.ol-logo-only {display:none;}
