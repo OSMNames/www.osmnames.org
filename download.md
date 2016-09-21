@@ -5,6 +5,8 @@ title: Download
 
 # Downloads
 
+# Data
+
 Here you can download the pre-generated data with over 21 million place names for the whole planet.
 Feel free to use it in your next project, your website, company product or just for your private research.
 
@@ -27,7 +29,7 @@ The file is available under the [Open Database License](https://tldrlegal.com/li
 	</div>
 </div>
 
-## Extract one country
+## Data extract for one country
 
 It is pretty easy to filter from the downloaded planet dump the records for a country of your choice. Use a command like:
 
@@ -69,3 +71,9 @@ north				bbox
 wikidata			the wikidata associated with this feature
 wikipedia 			the wikipedia URL associated with this feature
 ```
+
+# Software
+
+The open-source code for generating the data is available in repository https://github.com/osmnames/osmnames
+
+The Place Search API visible on this website is implemented with the open-source OSMSphinx project available at https://github.com/klokantech/osmnames-sphinxsearch.
