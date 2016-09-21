@@ -11,6 +11,10 @@ var search = function () {
   var autocomplete = new kt.OsmNamesAutocomplete('search', 'dgb7TgC5zR0YpsAqbEgb', true);
 
   autocomplete.registerCallback(function (item) {
+
+    document.getElementById('search').className = 'founded';
+    document.getElementsByClassName('ac-renderer')[0].className = 'ac-renderer founded';
+
     var isDegenerate = (item.boundingbox[2] - item.boundingbox[0]) * (item.boundingbox[3] - item.boundingbox[1]) <= 0;
     var extent = ol.extent.applyTransform(item.boundingbox, ol.proj.getTransform('EPSG:4326', 'EPSG:3857'));
 
