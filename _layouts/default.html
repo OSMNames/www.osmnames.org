@@ -18,29 +18,31 @@
     <link href="{{ site.baseurl }}base.css" rel="stylesheet" />
     <script type="text/javascript" src="{{ site.baseurl }}js/search.js"></script>
   </head>
-  <body>
-    <div id="navbar-top">
-      <div class="container">
-        <a class="title" href="http://klokantech.com">OSMNames</a>
-        <div class="nav">
-          <a href="{{ site.baseurl }}">Search</a>
-          <a href="{{ site.baseurl }}">About</a>
-          <a href="{{ site.baseurl }}">Download</a>
-          <a href="{{ site.baseurl }}">Docs</a>
-        </div>
-        <div class="nav-mobile">
-          <div id="nav-mobile-btn">H</div>
-          <div id="nav-mobile-nav">
+  <body {% if page.url == "/" %}class="home"{% endif %} >
+    <div class="container">
+      <div id="navbar-top">
+        <div class="container">
+          <a class="title" href="http://klokantech.com">OSMnames</a>
+          <div class="nav">
             <a href="{{ site.baseurl }}">Search</a>
-            <a href="{{ site.baseurl }}">About</a>
-            <a href="{{ site.baseurl }}">Download</a>
-            <a href="{{ site.baseurl }}">Docs</a>
+            <a href="{{ site.baseurl }}about">About</a>
+            <a href="{{ site.baseurl }}download">Download</a>
+            <a href="{{ site.baseurl }}docs">Docs</a>
+          </div>
+          <div class="nav-mobile">
+            <div id="nav-mobile-btn">H</div>
+            <div id="nav-mobile-nav">
+              <a href="{{ site.baseurl }}">Search</a>
+              <a href="{{ site.baseurl }}about">About</a>
+              <a href="{{ site.baseurl }}download">Download</a>
+              <a href="{{ site.baseurl }}docs">Docs</a>
+            </div>
           </div>
         </div>
       </div>
+
+      {{ content }}
+
     </div>
-
-    {{ content }}
-
   </body>
 </html>
