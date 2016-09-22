@@ -10,15 +10,15 @@ Feel free to use it in your next project, your website, company product or just 
 
 The file is available under the [Open Database License](https://tldrlegal.com/license/odc-open-database-license-(odbl)), the same license as the original [OpenStreetMap](https://www.openstreetmap.org/copyright) data.
 
-<div id="planet-list">
-	<div class="col12 download-item">
-		<div class="col4 download-title" onclick="location.href='https://github.com/OSMNames/OSMNames/releases/download/v1.1/planet-latest.tsv.gz'">
-			Full Planet
+<div id="planet-list" class="mary-3 row">
+	<div class="col12 border-primary">
+		<div class="col4" onclick="location.href='https://github.com/OSMNames/OSMNames/releases/download/v1.1/planet-latest.tsv.gz'">
+			<b class="big">Full Planet</b>
 		</div>
 		<div class="col2" onclick="location.href='https://github.com/OSMNames/OSMNames/releases/download/v1.1/planet-latest.tsv.gz'">
 			1.46 GB
 		</div>
-		<div class="col6 clipboard">
+		<div class="col6 clipboard center">
 			<input id="world" class="clipboard-input" value="https://github.com/OSMNames/OSMNames/releases/download/v1.1/planet-latest.tsv.gz">
 			<button class="btn" data-clipboard-target="#world" onclick="setHint(this, 'Copied!')" onmouseout="setHint(this, 'Copy to clipboard')">
 			    Copy

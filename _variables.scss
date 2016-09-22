@@ -1,5 +1,5 @@
 /* Colors */
-$color-primary: #115e94;
+$color-primary: #84acc9;
 $color-secondary: #fff;
 
 $color-gray-dark: #393939;
@@ -50,14 +50,14 @@ $font-size-h6: 12px !default;
 
 $code-color-bg: $color-gray-light;
 $code-color: $color-gray-dark;
-$code-padding: 2px 6px;
+$code-padding: 2px 10px;
 
 /* Padding, margin */
 $padding-y: 15px;
 $padding-x: 15px;
 
 /* Container */
-$container-max: 1200px;
+$container-max: 960px;
 $container-width: 95%;
 $container-padding-x: 0;
 $container-padding-y: 0;
@@ -130,11 +130,11 @@ $btns-hover-color: #fff;
 /* Border */
 $borders: (
 //('name', 'size', 'type', 'color')
-('primary', 1px, solid, $color-primary),
-('gray-dark', 1px, solid, $color-gray-dark),
-('gray', 1px, solid, $color-gray),
-('gray-light', 1px, solid, $color-gray-light),
-('black', 1px, solid, #ffffff)
+('primary', 2px, solid, $color-primary),
+('gray-dark', 2px, solid, $color-gray-dark),
+('gray', 2px, solid, $color-gray),
+('gray-light', 2px, solid, $color-gray-light),
+('black', 2px, solid, #ffffff)
 );
 
 $border-radius: 5px !default;

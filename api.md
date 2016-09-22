@@ -10,11 +10,15 @@ Klokan Technologies GmbH team has developed a basic Place Search API providing r
 
 ## Autocomplete REST API
 
-### Search for autocomplete: `/q/<query>.js`
+### Search for autocomplete
+
+ `/q/<query>.js`
 
 This endpoint returns 20 results matching the `<query>`.
 
-### Country specific search for autocomplete `/<country_code>/q/<query>.js`
+### Country specific search for autocomplete 
+
+`/<country_code>/q/<query>.js`
 
 This endpoint returns 20 results matching the `<query>` within a specific country, identified by the `<country_code` (lowercase ISO 3166 Alpha-2 code).
 
@@ -33,7 +37,6 @@ Get your free access key:
 <form method="post" action="" class="padt-1">
   <input type="email" name="email" class="input-text inline" placeholder="Your email">
   <input type="submit" value="Send" class="btn-gray-dark">
-  <input type="text" name="url" id="form-url">
 </form>
 
 ## Install the API server on your own computer
