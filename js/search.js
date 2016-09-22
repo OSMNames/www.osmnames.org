@@ -12,7 +12,9 @@ var search = function () {
 
   autocomplete.registerCallback(function (item) {
 
-    document.getElementById('search').className = 'founded';
+    document.getElementById('searchform').className = 'founded';
+    document.getElementById('navbar-top').className = '';
+    document.getElementById('banner').style.display = 'none';
     document.getElementsByClassName('ac-renderer')[0].className = 'ac-renderer founded';
 
     var isDegenerate = (item.boundingbox[2] - item.boundingbox[0]) * (item.boundingbox[3] - item.boundingbox[1]) <= 0;
