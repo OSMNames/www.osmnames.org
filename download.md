@@ -22,8 +22,8 @@ The file is available under the [Open Database License](https://tldrlegal.com/li
 		</div>
 		<div class="col6 clipboard">
 			<input id="world" class="clipboard-input" value="https://github.com/OSMNames/OSMNames/releases/download/v1.1/planet-latest.tsv.gz">
-			<button class="clipboard-button hint--bottom hint--rounded" data-clipboard-target="#world" onclick="setHint(this, 'Copied!')" onmouseout="setHint(this, 'Copy to clipboard')">
-			    <img src="/img/clipboard-black.svg" class="clipboard-img" alt="Copy to clipboard">
+			<button class="btn" data-clipboard-target="#world" onclick="setHint(this, 'Copied!')" onmouseout="setHint(this, 'Copy to clipboard')">
+			    Copy
 			</button>
 		</div>
 	</div>

@@ -78,6 +78,12 @@ body.home{
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
 }
 
+.banner-page{
+  height: 280px;
+  background-color: #e8e5d8;
+  background-image: url('/img/banner-page.jpg');
+}
+
 .ac-renderer{
   border-radius: 2px;
   margin: 10px 0;
@@ -101,6 +107,9 @@ body.home{
   }
 }
 
+.height-60{
+  height: 60px;
+}
 
 .octocat{
   margin-top: -20px;
