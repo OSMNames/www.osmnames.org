@@ -77,12 +77,13 @@ body.home{
 #navbar-top{
   transition: height .2s ease;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+  position: absolute;
 }
 
 .banner-page{
   height: 280px;
   background-color: #e8e5d8;
-  background-image: url('/img/banner-page.jpg');
+  background-image: url('/img/banner-page.png');
 }
 
 .ac-renderer{
