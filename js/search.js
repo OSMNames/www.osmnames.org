@@ -23,9 +23,7 @@ var search = function () {
     });
     if (isDegenerate) {
       var rank = item['place_rank'];
-      var zoom = 20;
-      if (rank < 20) zoom = 16;
-      if (rank < 16) zoom = 8;
+      var zoom = Math.min(2 + Math.floor(rank / 2), 20);
       map.getView().setZoom(zoom);
     }
     var coords = [[extent[0], extent[1]], [extent[0], extent[3]], [extent[2], extent[3]], [extent[2], extent[1]], [extent[0], extent[1]]];
