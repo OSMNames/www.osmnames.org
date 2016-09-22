@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Download
+title: Downloads
 ---
 
-# Downloads
-
-# Data
+## Data
 
 Here you can download the pre-generated data with over 21 million place names for the whole planet.
 Feel free to use it in your next project, your website, company product or just for your private research.

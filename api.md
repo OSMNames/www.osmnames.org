@@ -1,9 +1,7 @@
 ---
 layout: page
-title: API
+title: Place Search API
 ---
-
-# Place Search API
 
 You can try the search system in your own project right now!
 

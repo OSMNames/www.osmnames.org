@@ -1,9 +1,7 @@
 ---
 layout: page
-title: About
+title: About the project
 ---
-
-# About the project
 
 OSMNames project offers downloadable list of placenames derived from OpenStreetMap database.
 

@@ -1,9 +1,7 @@
 ---
 layout: page
-title: Docs
+title: Documentation
 ---
-
-# Documentation
 
 The following tutorials explain how you can use the OSMNames project. Feel free to submit [an issue](https://github.com/osmnames/osmnames/issues), if you think something is missing.
 
