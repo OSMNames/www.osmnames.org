@@ -77,3 +77,7 @@ function hideMessages(sec) {
     }
   }, sec * 1000);
 }
+
+function setHint(element, hint) {
+  element.setAttribute("data-hint", hint);
+}

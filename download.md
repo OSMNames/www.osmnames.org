@@ -10,6 +10,8 @@ Feel free to use it in your next project, your website, company product or just 
 
 The file is available under the [Open Database License](https://tldrlegal.com/license/odc-open-database-license-(odbl)), the same license as the original [OpenStreetMap](https://www.openstreetmap.org/copyright) data.
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.2.1/hint.min.css" />
 <div id="planet-list" class="mary-3 row">
 	<div class="col12 border-primary">
 		<div class="col4" onclick="location.href='https://github.com/OSMNames/OSMNames/releases/download/v1.1/planet-latest.tsv.gz'">
@@ -20,12 +22,16 @@ The file is available under the [Open Database License](https://tldrlegal.com/li
 		</div>
 		<div class="col6 clipboard center">
 			<input id="world" class="clipboard-input" value="https://github.com/OSMNames/OSMNames/releases/download/v1.1/planet-latest.tsv.gz">
-			<button class="btn" data-clipboard-target="#world" onclick="setHint(this, 'Copied!')" onmouseout="setHint(this, 'Copy to clipboard')">
+			<button class="btn clipboard-button" data-clipboard-target="#world" onclick="setHint(this, 'Copied!')" onmouseout="setHint(this, 'Copy to clipboard')">
 			    Copy
 			</button>
 		</div>
 	</div>
 </div>
+<script>
+  // instantiate download clipboard
+  new Clipboard('.clipboard-button');
+</script>
 
 ## Data extract for one country
 
