@@ -40,6 +40,19 @@ $ zcat planet-latest.tsv.gz | awk -F '\t' 'NR == 1 || $16 == "ch"' > switzerland
 Where "ch" is 2 letter country code according ISO-3166, in this case for Switzerland.
 Similarly, it is possible to extract only records of certain type or class, of set a filter on another column.
 
+
+## Data extract by bounding box
+
+Because the data contains lon/lat colums as well as bounding box (west, south, east, north) you can also extract all records by geographical filters.
+
+To create an extract of all place names in the area of Zurich in Switzerland you can run a command like:
+
+```
+zcat planet-latest.tsv.gz | awk -F '\t' 'NR == 1 || ($8 > 47.225 && $8 < 47.533 && $7 > 8.275 && $7 < 8.800)' > zurich_switzerland.tsv
+```
+
+To find the relevant bounds check the [Bounding box tool](http://boundingbox.klokantech.com/) or list with [city](https://github.com/osm2vectortiles/osm2vectortiles/blob/master/src/create-extracts/city_extracts.tsv) and [country](https://github.com/osm2vectortiles/osm2vectortiles/blob/master/src/create-extracts/country_extracts.tsv) boundaries.
+
 ## Data format details
 
 The data are generated in the TSV format - a tab separated spreadsheet file with one record per row. First row contains the name of columns. All characters are utf-8 encoded. The files distributed with a release are compressed with gzip. Use gunzip or zcat to extract the raw text.
