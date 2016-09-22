@@ -34,7 +34,7 @@ The file is available under the [Open Database License](https://tldrlegal.com/li
 It is pretty easy to filter from the downloaded planet dump the records for a country of your choice. Use a command like:
 
 ```
-$ zcat planet-latest.tsv.gz | awk -F '\t' 'NR == 1 || $16 == "ch"' > extract.tsv
+$ zcat planet-latest.tsv.gz | awk -F '\t' 'NR == 1 || $16 == "ch"' > switzerland.tsv
 ```
 
 Where "ch" is 2 letter country code according ISO-3166, in this case for Switzerland.
