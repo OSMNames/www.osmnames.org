@@ -1,12 +1,12 @@
 ---
 layout: page
-title: OSMNames API
+title: API
 ---
 
 You can try the search system in your own project right now!
 
 The OSMNames open-source project provides raw place data in an easy to index form.
-Klokan Technologies GmbH team has developed a basic Place Search API providing responses for queries in a form of structured JSON data.
+Klokan Technologies GmbH team has developed a basic search system providing responses for queries in a form of structured JSON data.
 
 ## Autocomplete REST API
 
@@ -26,7 +26,7 @@ The JavaScript Autocomplete components submitting AJAX queries to the server is 
 
 ## Nominatim compatible API
 
-The open-source OSMNames SphinxSearch system comes with an (incomplete implementation) of the API compatible with Nominatim, to simplify migration of existing clients.
+The open-source OSMNames SphinxSearch system comes with an (incomplete implementation) of the API compatible with Nominatim, to simplify migration of the existing web and mobile clients.
 
 <!---
 ## Get your free key
@@ -43,6 +43,6 @@ Get your free access key:
 
 ## Install the API server on your own computer
 
-Please follow the tutorial in the "docs" section.
+Please follow the tutorial in the [Documentation](http://osmnames.org/docs/) section.
 
 Contact us if you are interested in a production deployment of the open source stack on your own hardware infrastructure.
