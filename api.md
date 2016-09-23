@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Place Search API
+title: OSMNames API
 ---
 
 You can try the search system in your own project right now!
