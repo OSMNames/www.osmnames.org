@@ -78,10 +78,10 @@ body.home{
   transition: height .2s ease;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
   position: absolute;
-}
 
-#nav-mobile {
-  text-shadow: none;
+  .nav-mobile {
+    text-shadow: none;
+  }
 }
 
 .banner-page{
