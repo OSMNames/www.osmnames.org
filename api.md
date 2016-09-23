@@ -28,6 +28,7 @@ The JavaScript Autocomplete components submitting AJAX queries to the server is 
 
 The open-source OSMNames SphinxSearch system comes with an (incomplete implementation) of the API compatible with Nominatim, to simplify migration of existing clients.
 
+<!---
 ## Get your free key
 
 This free map place search service is available only for a non-commercial use and demonstration purposes.
@@ -38,7 +39,7 @@ Get your free access key:
   <input type="email" name="email" class="input-text inline" placeholder="Your email">
   <input type="submit" value="Send" class="btn-gray-dark">
 </form>
-
+-->
 ## Install the API server on your own computer
 
 Please follow the tutorial in the "docs" section.
