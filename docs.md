@@ -3,21 +3,19 @@ layout: page
 title: Documentation
 ---
 
-The following tutorials explain how you can use the OSMNames project. Feel free to submit [an issue](https://github.com/osmnames/osmnames/issues), if you think something is missing.
+The following tutorials explain how you can use the OSMNames project. Feel free to submit [an issue](https://github.com/osmnames/osmnames/issues) if you think something is missing or does not run as it should.
 
-# Install the Place Search API on your server
+# Install the OSMNames Search on your computer
 
-We have prepared a docker image OSMNames Search API, SphinxSearch and nginx.
+If you want to run the place search system on your laptop/desktop, the easiest is to get the [Kitematic](https://kitematic.com/) docker graphical interface and start the "osmnames-sphinxsearch". This downloads the container and immediatelly start the system on your computer with sample data.
 
-Whole service can be run from the command-line with a single command:
-
-Run with demo data (10 records only) only
+You can do the same on the command-line (on a server):
 
 ```
 docker run -d -p 80:80 klokantech/osmnames-sphinxsearch
 ```
 
-You can attach your file `data.tsv`, which has to be located in the internal path `/data/input/data.tsv`:
+You can attach your file `data.tsv`, which has to be located in the container internal path `/data/input/data.tsv`:
 
 ```
 docker run -d \
@@ -27,8 +25,9 @@ docker run -d \
 ```
 
 This file will be indexed on the first run or if index files are missing.
+The generated indexes for the whole world are large (over 30GBytes) and time consuming to create. But the process is done only once.
 
-You can specify path for index folder as well:
+You can specify path for index folder on your computer as well:
 
 ```
 docker run -d \
@@ -38,82 +37,28 @@ docker run -d \
     klokantech/osmnames-sphinxsearch
 ```
 
-Or attach a path with the following folder structure:
+Even easier alternative is to create on your computer data folder with structure:
 
 ```
 /path/to/folder/
-    - input/
-        - data.tsv
-    - index/
+/path/to/folder/input/
+/path/to/folder/input/data.tsv
+/path/to/folder/index/
 ```
 
-directly with simple command:
-
+and then directly use it with a simple command:
 ```
 docker run -d -v /path/to/folder/:/data/ -p 80:80 klokantech/osmnames-sphinxsearch
 ```
+or from Kitematic.
 
-# Generate the data from raw OSM Planet
+If you are not familiar with the docker and you want to directly install the project on Linux, then you can do that too.
+The main search system is written in python (Flask) and requires the search engine (SphinxSearch). A step by step setup for Debian is visible [here](https://github.com/klokantech/osmnames-sphinxsearch/blob/master/Dockerfile).
 
-### Get Started
+# Generate the data from raw OSM data
 
-You need a complete OSM PBF data dump either from a [country extract](http://download.geofabrik.de/index.html) or of the [entire world](http://planet.osm.org/).
-Download the data and put it into the `data` directory.
+You can always [downnload](http://osmnames.org/download/) the prepared world data and filter it for your needs.
 
-```bash
-wget --directory-prefix=./data http://download.geofabrik.de/europe/switzerland-latest.osm.pbf
-```
+In case you want to improve, modify or regenerate or extend the data by yourself you are welcome to do this.
 
-Alternatively there is a docker-compose, just edit FILE_URL in download-pbf.sh accordingly
-
-```bash
-docker-compose run download-pbf
-```
-
-Now we need to set up the database and import the data using the `import-osm` Docker container.
-
-```bash
-# This will automatically initialize the database
-docker-compose up -d postgres
-```
-
-```bash
-# Import additional wikipedia data to the ./data folder
-docker-compose run import-wikipedia
-```
-
-Create the database schema
-
-```bash
-docker-compose run schema
-```
-
-Import the pbf file from the data folder
-
-```bash
-# Import the OSM data dump from the ./data folder
-docker-compose run import-osm
-```
-
-
-We can now export the ranked geonames and their geometries.
-
-```bash
-docker-compose run export-osmnames
-```
-
-### Components
-
-The different components that attach to the `postgres` container are all located in the `src` directory of OSMNames.
-
-| Component         | Description
-|-------------------|--------------------------------------------------------------
-| postgres          | PostGIS data store for OSM data and to perform noise analysis
-| download-pbf      | automatically downloads the pbf file 
-| import-wikipedia  | Imports wikipedia data for more accurate importance calculation
-| import-osm        | Imposm3 based import tool with custom mapping to import selective OSM into the database and reconstruct it as GIS geometries, handles indexing and hierarchy reconstruction
-| export-osmnames   | Export names and their bounding boxes to TSV datasets
-| schema            | Contains views, tables, functions for the schema
-
-
-For more details please read the complete documentation of the OSMNames project at http://osmnames.readthedocs.io/
+The whole process is described in the manual available at [http://osmnames.readthedocs.io/](http://osmnames.readthedocs.io/) and in the [Getting started](https://github.com/OSMNames/OSMNames#get-started) section in the README.md.
