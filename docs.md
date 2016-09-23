@@ -14,7 +14,7 @@ Whole service can be run from the command-line with a single command:
 Run with demo data (10 records only) only
 
 ```
-docker run -d -p 80:80 klokantech/osmsphinx
+docker run -d -p 80:80 klokantech/osmnames-sphinxsearch
 ```
 
 You can attach your file `data.tsv`, which has to be located in the internal path `/data/input/data.tsv`:
@@ -23,7 +23,7 @@ You can attach your file `data.tsv`, which has to be located in the internal pat
 docker run -d \
     -v /path/to/folder/data.tsv:/data/input/ \
     -p 80:80 \
-    klokantech/osmsphinx
+    klokantech/osmnames-sphinxsearch
 ```
 
 This file will be indexed on the first run or if index files are missing.
@@ -35,7 +35,7 @@ docker run -d \
     -v /path/to/index/folder/:/data/index/ \
     -v /path/to/data/folder/:/data/input/ \
     -p 80:80 \
-    klokantech/osmsphinx
+    klokantech/osmnames-sphinxsearch
 ```
 
 Or attach a path with the following folder structure:
@@ -50,7 +50,7 @@ Or attach a path with the following folder structure:
 directly with simple command:
 
 ```
-docker run -d -v /path/to/folder/:/data/ -p 80:80 klokantech/osmsphinx
+docker run -d -v /path/to/folder/:/data/ -p 80:80 klokantech/osmnames-sphinxsearch
 ```
 
 # Generate the data from raw OSM Planet
