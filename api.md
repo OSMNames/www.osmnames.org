@@ -40,6 +40,7 @@ Get your free access key:
   <input type="submit" value="Send" class="btn-gray-dark">
 </form>
 -->
+
 ## Install the API server on your own computer
 
 Please follow the tutorial in the "docs" section.
