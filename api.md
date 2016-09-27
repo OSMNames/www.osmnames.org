@@ -20,7 +20,7 @@ This endpoint returns 20 results matching the `<query>`.
 
 `/<country_code>/q/<query>.js`
 
-This endpoint returns 20 results matching the `<query>` within a specific country, identified by the `<country_code` (lowercase ISO 3166 Alpha-2 code).
+This endpoint returns 20 results matching the `<query>` within a specific country, identified by the `<country_code>` (lowercase ISO 3166 Alpha-2 code).
 
 The JavaScript Autocomplete components submitting AJAX queries to the server is open-source as well.
 
