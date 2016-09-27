@@ -8,7 +8,7 @@ var search = function () {
           'https://klokantech.tilehosting.com/styles/basic.json?key=tX0QWNRowlarrQpqxngS',
           'https://klokantech.tilehosting.com/styles/basic/rendered.json?key=tX0QWNRowlarrQpqxngS',
           'map-ol', 'map-gl').getMap();
-  var autocomplete = new kt.OsmNamesAutocomplete('search', 'dgb7TgC5zR0YpsAqbEgb', true);
+  var autocomplete = new kt.OsmNamesAutocomplete('search', undefined, undefined, true);
 
   autocomplete.registerCallback(function (item) {
 
