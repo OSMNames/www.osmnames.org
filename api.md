@@ -16,7 +16,7 @@ Klokan Technologies GmbH team has developed a basic search system providing resp
 
 This endpoint returns 20 results matching the `<query>`.
 
-### Country specific search for autocomplete 
+### Country specific search for autocomplete
 
 `/<country_code>/q/<query>.js`
 
@@ -39,6 +39,31 @@ Get your free access key:
   <input type="email" name="email" class="input-text inline" placeholder="Your email">
   <input type="submit" value="Send" class="btn-gray-dark">
 </form>
+
+## Autocomplete JavaScript component
+
+You can easily create OSMNames autocomplete using prepared JavaScript component:
+
+{% highlight html %}
+<html>
+  <head>
+    <script src="https://osmnames.org/api/v1/autocomplete.js"></script>
+    <link href="https://osmnames.org/api/v1/autocomplete.css" rel="stylesheet" />
+  </head>
+  <body>
+    <input autocomplete="off" id="search" type="text" />
+    <script>
+      var autocomplete = new kt.OsmNamesAutocomplete(
+          'search', 'https://search.osmnames.org/', '{API_KEY}');
+      // Replace {API_KEY} with your own key from https://osmnames.org/api
+
+      autocomplete.registerCallback(function(item) {
+        alert(JSON.stringify(item, ' ', 2));
+      });
+    </script>
+  </body>
+</html>
+{% endhighlight %}
 -->
 
 ## Install the API server on your own computer
