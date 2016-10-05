@@ -3,6 +3,8 @@ layout: page
 title: API
 ---
 
+<div id="msg"></div>
+
 You can try the search system in your own project right now!
 
 The OSMNames open-source project provides raw place data in an easy to index form.
@@ -28,17 +30,36 @@ The JavaScript Autocomplete components submitting AJAX queries to the server is 
 
 The open-source OSMNames SphinxSearch system comes with an (incomplete implementation) of the API compatible with Nominatim, to simplify migration of the existing web and mobile clients.
 
-<!---
 ## Get your free key
 
 This free map place search service is available only for a non-commercial use and demonstration purposes.
 
 Get your free access key:
 
-<form method="post" action="" class="padt-1">
+<form method="post" action="http://localhost/klokan/www.klokantech.com/maps/?next=http://osmnames.org/api" class="padt-1">
   <input type="email" name="email" class="input-text inline" placeholder="Your email">
+  <input type="hidden" name="product" value="OSMNames">
+  <input type="input" name="url" class="hidden" placeholder="Leave this empty">
   <input type="submit" value="Send" class="btn-gray-dark">
 </form>
+
+<script>
+  var msg = getParam('msg');
+  if(msg != null){
+    var msgEl = document.getElementById('msg');
+    msgEl.className = 'message success';
+    msgEl.innerHTML = msg;
+  }
+
+  function getParam(name, url) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(window.location.href);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+</script>
 
 ## Autocomplete JavaScript component
 
@@ -64,7 +85,6 @@ You can easily create OSMNames autocomplete using prepared JavaScript component:
   </body>
 </html>
 {% endhighlight %}
--->
 
 ## Install the API server on your own computer
 
