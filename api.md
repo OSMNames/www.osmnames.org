@@ -36,7 +36,7 @@ This free map place search service is available only for a non-commercial use an
 
 Get your free access key:
 
-<form method="post" action="http://localhost/klokan/www.klokantech.com/maps/?next=http://osmnames.org/api" class="padt-1">
+<form method="post" action="http://maps.klokantech.com/?next=http://osmnames.org/api" class="padt-1">
   <input type="email" name="email" class="input-text inline" placeholder="Your email">
   <input type="hidden" name="product" value="OSMNames">
   <input type="input" name="url" class="hidden" placeholder="Leave this empty">
