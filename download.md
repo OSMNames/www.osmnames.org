@@ -38,7 +38,7 @@ The file is available under the [Open Database License](https://tldrlegal.com/li
 It is pretty easy to filter from the downloaded planet dump the records for a country of your choice. Use a command like:
 
 ```
-$ zcat planet-latest.tsv.gz | awk -F '\t' 'NR == 1 || $16 == "ch"' > switzerland.tsv
+$ zcat planet-latest.tsv.gz | awk -F '\t' -v OFS='\t' 'NR == 1 || $16 == "ch"' > switzerland.tsv
 ```
 
 Where "ch" is 2 letter country code according ISO-3166, in this case for Switzerland.
@@ -52,7 +52,7 @@ Because the data contains lon/lat colums as well as bounding box (west, south, e
 To create an extract of all place names in the area of Zurich in Switzerland you can run a command like:
 
 ```
-zcat planet-latest.tsv.gz | awk -F '\t' 'NR == 1 || ($8 > 47.225 && $8 < 47.533 && $7 > 8.275 && $7 < 8.800)' > zurich_switzerland.tsv
+zcat planet-latest.tsv.gz | awk -F '\t' -v OFS='\t' 'NR == 1 || ($8 > 47.225 && $8 < 47.533 && $7 > 8.275 && $7 < 8.800)' > zurich_switzerland.tsv
 ```
 
 To find the relevant bounds check the [Bounding box tool](http://boundingbox.klokantech.com/) or list with [city](https://github.com/osm2vectortiles/osm2vectortiles/blob/master/src/create-extracts/city_extracts.tsv) and [country](https://github.com/osm2vectortiles/osm2vectortiles/blob/master/src/create-extracts/country_extracts.tsv) boundaries.
