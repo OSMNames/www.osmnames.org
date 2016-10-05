@@ -39,7 +39,7 @@ Get your free access key:
 <form method="post" action="http://maps.klokantech.com/?next=http://osmnames.org/api" class="padt-1">
   <input type="email" name="email" class="input-text inline" placeholder="Your email">
   <input type="hidden" name="product" value="OSMNames">
-  <input type="input" name="url" class="hidden" placeholder="Leave this empty">
+  <input type="text" name="url" class="hidden" placeholder="Leave this empty">
   <input type="submit" value="Send" class="btn-gray-dark">
 </form>
 
