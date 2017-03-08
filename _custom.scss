@@ -18,10 +18,10 @@ body.home{
   }
 
   overflow: hidden !important;
-  
+
   form#searchform{
-	@media only screen and (max-width: $sc-small) {
-	  top: 80%;
+    @media only screen and (max-width: $sc-small) {
+      top: 80%;
     }
     width: 500px;
     position: absolute;
@@ -29,7 +29,7 @@ body.home{
     left: 50%;
     margin-left: -250px;
     z-index: 105;
-  
+
     div{
       position: absolute;
       z-index: 110;
@@ -56,45 +56,48 @@ body.home{
       box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
       transition: top 0.2s ease;
     }
-	
-	@media only screen and (max-width: $sc-medium) {
-	  input#search {
-		position: relative;
-		display: block;
-		width: 300px;
-		margin: 0 auto;
-		opacity: 0.4;
-		
-	    &:focus {
-		  opacity: 1;
-	    }
-	  }
-	}
 
-	@media only screen and (max-width: $sc-small) {
-	  input#search {
-		position: relative;
-		display: block;
-		width: 250px;
-		margin: 0 auto;
-		opacity: 0.4;
-		
-	    &:focus {
-		  opacity: 1;
-	    }
-	  }
-	}
-	
+    @media only screen and (max-width: $sc-medium) {
+      input#search {
+        position: relative;
+        display: block;
+        width: 300px;
+        margin: 0 auto;
+        opacity: 0.4;
+
+        &:focus {
+          opacity: 1;
+        }
+      }
+      .icon{
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: $sc-small) {
+      input#search {
+        position: relative;
+        display: block;
+        width: 250px;
+        margin: 0 auto;
+        opacity: 0.4;
+
+        &:focus {
+          opacity: 1;
+        }
+      }
+    }
+
     &.founded{
       top: 100px;
     }
-	
-	@media only screen and (max-width: $sc-medium) {
-	  &.founded {
-		position: relative;
-		z-index: 85;
-		top: 75px;
-	  }
+
+    @media only screen and (max-width: $sc-medium) {
+      &.founded {
+        position: relative;
+        z-index: 85;
+        top: 75px;
+      }
     }
   }
 
@@ -145,7 +148,7 @@ body.home{
     height: 48px;
     line-height: 48px;
     padding: 0 16px;
-    
+
     .type {
       width:auto;
       background:#fff;
@@ -154,7 +157,7 @@ body.home{
       right:0;
       padding:0 16px;
     }
-    
+
     &.ac-active .type {
       background:#f3f3f3;
     }
@@ -162,20 +165,20 @@ body.home{
 
   &.founded{
     top: 143px !important;
-	overflow-y: scroll;
-	max-width: 230px;
+    overflow-y: scroll;
+    max-width: 230px;
     max-height: 750px;
     transition: top 0.2s linear;
   }
-  
+
   @media only screen and (max-width: $sc-medium) {
-	&.founded {
-	  position: absolute;
-	  z-index: 100;
-	  margin: 0 auto;
-	  max-width: 150px;
-	  max-height: 400px;
-	}
+    &.founded {
+      position: absolute;
+      z-index: 100;
+      margin: 0 auto;
+      max-width: 150px;
+      max-height: 400px;
+    }
   }
 }
 
@@ -195,13 +198,13 @@ body.home{
 
 @media only screen and (max-width: $sc-medium) {
   .clipboard-input {
-	width: 60%;
+    width: 60%;
   }
 }
 
 @media only screen and (max-width: $sc-small) {
   .clipboard-input {
-	width: 65%;
+    width: 65%;
   }
 }
 
@@ -243,7 +246,7 @@ body.home{
 
 @media only screen and (max-width: $sc-medium) {
   .ol-zoom {
-	top: 35%;
+    top: 35%;
   }
 }
 
