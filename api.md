@@ -7,7 +7,7 @@ title: API
 
 You can try the search system in your own project right now!
 
-The OSMNames open-source project provides raw place data in an easy to index form.
+The OSMNames open-source project provides raw place data in an easy-to-index form.
 Klokan Technologies GmbH team has developed a basic search system providing responses for queries in a form of structured JSON data.
 
 ## Autocomplete REST API
@@ -32,7 +32,7 @@ The open-source OSMNames SphinxSearch system comes with an (incomplete implement
 
 ## Get your free key
 
-This free map place search service is available only for a non-commercial use and demonstration purposes.
+This free map place search service is available only for non-commercial use and demonstration purposes.
 
 Get your free access key:
 
@@ -63,7 +63,7 @@ Get your free access key:
 
 ## Autocomplete JavaScript component
 
-You can easily create OSMNames autocomplete using prepared JavaScript component:
+You can easily create OSMNames autocomplete using the prepared JavaScript component:
 
 {% highlight html %}
 <html>

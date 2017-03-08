@@ -35,19 +35,19 @@ The file is available under the [Open Database License](https://tldrlegal.com/li
 
 ## Data extract for one country
 
-It is pretty easy to filter from the downloaded planet dump the records for a country of your choice. Use a command like:
+It is pretty easy to filter the records for a country of your choice from the downloaded planet dump. Use a command like:
 
 ```
 $ zcat planet-latest.tsv.gz | awk -F '\t' -v OFS='\t' 'NR == 1 || $16 == "ch"' > switzerland.tsv
 ```
 
-Where "ch" is 2 letter country code according ISO-3166, in this case for Switzerland.
-Similarly, it is possible to extract only records of certain type or class, of set a filter on another column.
+Where "ch" is the 2 letter country code according to ISO-3166, in this case for Switzerland.
+Similarly, it is possible to extract only records of certain types or classes, as well as setting a filter on another column.
 
 
 ## Data extract by bounding box
 
-Because the data contains lon/lat colums as well as bounding box (west, south, east, north) you can also extract all records by geographical filters.
+Because the data contains lon/lat columns as well as bounding boxes (west, south, east, north), you can also extract all records by geographical filters.
 
 To create an extract of all place names in the area of Zurich in Switzerland you can run a command like:
 
@@ -59,9 +59,9 @@ To find the relevant bounds check the [Bounding box tool](http://boundingbox.klo
 
 ## Data format details
 
-The data are generated in the TSV format - a tab separated spreadsheet file with one record per row. First row contains the name of columns. All characters are utf-8 encoded. The files distributed with a release are compressed with gzip. Use gunzip or zcat to extract the raw text.
+The data is generated in the TSV format, which is a tab separated spreadsheet file with one record per row. The first row contains the name of the columns. All characters are utf-8 encoded. The files distributed with a release are compressed using gzip. We suggest you to use gunzip or zcat to extract the raw text.
 
-The columns has a fixed order:
+The columns have a fixed order:
 
 ```
 name 				the name of the feature (default language is en, others available(de,es,fr,ru,zh))
@@ -79,7 +79,7 @@ city
 county
 state	
 country	
-country_code		ISO-3166 2-letter country code
+country_code		ISO-3166 2 letter country code
 display_name		the display name representing the hierarchy
 west				bbox
 south				bbox
