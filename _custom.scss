@@ -1,5 +1,44 @@
 /* For custom styles in project */
 
+/* Begin custom responsive design changes */
+
+@media only screen and (max-width: $sc-medium) {
+  h1,
+  .h1 {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: $sc-medium) {
+  h2,
+  .h2 {
+    font-size: 18px;
+  }
+}
+h2#data {
+  margin: 0;
+  padding-bottom: 11px;
+}
+@media only screen and (max-width: $sc-small) {
+  p {
+    font-size: ($font-size * 0.875);
+  }
+}
+@media only screen and (max-width: $sc-small) {
+  img {
+	width: 90%;
+  }
+}
+.icon, [class^='icon-'], [class*=' icon-']{
+  @media only screen and (max-width: 768px) {
+	padding-left: 115px;
+  }
+  @media only screen and (max-width: 480px) {
+	padding-left: 142px;
+  }
+}
+
+/* End custom responsive design changes */
+
 body.home{
 
   #navbar-top{
@@ -20,7 +59,7 @@ body.home{
   overflow: hidden !important;
   
   form#searchform{
-	@media only screen and (max-width: $sc-small) {
+	@media only screen and (max-width: $sc-medium - 1) {
 	  top: 80%;
     }
     width: 500px;
@@ -99,12 +138,15 @@ body.home{
   }
 
   #banner{
+    @media only screen and (max-width: $sc-medium - 1) {
+	  top: 70%;
+	}
     text-align: center;
     position: absolute;
-    top: 450px;
+    top: 40%;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 105;
     margin-top: -140px;
 
     h1, h2{
@@ -193,7 +235,7 @@ body.home{
   width: 300px;
 }
 
-@media only screen and (max-width: $sc-medium) {
+@media only screen and (max-width: $sc-medium - 1) {
   .clipboard-input {
 	width: 60%;
   }
