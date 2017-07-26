@@ -259,17 +259,29 @@ body.home{
 #details {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 25px;
   font-size: 10px;
   width: 400px;
-  max-height: 50%;
+  max-height: 90%;
   background: rgba(255,255,255,.6);
-  overflow-x: none;
+
 }
 
 @media only screen and (max-width: $sc-medium) {
   #details {
-    display: none;
+    bottom: 15px;
+	width: 300px;
+	line-height: 1.2;
+	overflow: auto;
+  }
+}
+
+@media only screen and (max-width: $sc-small) {
+  #details {
+    bottom: 15px;
+	width: 200px;
+	line-height: 1;
+	overflow: auto;
   }
 }
 
@@ -319,4 +331,8 @@ body.home{
 
 #msg{
   margin-bottom: 20px;
+}
+
+#facebook{
+z-index: 50;
 }
