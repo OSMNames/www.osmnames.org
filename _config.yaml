@@ -2,11 +2,11 @@ name: "OSMNames"
 
 permalink: pretty
 
-baseurl: "/"
+baseurl: ""
 
 sass:
   style: :compressed
   sass_dir: styles/_sass
 
-exclude: 
+exclude:
 - "styles/base.scss"
