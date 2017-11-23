@@ -14,14 +14,14 @@ The file is available under the [Open Database License](https://tldrlegal.com/li
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.2.1/hint.min.css" />
 <div id="planet-list" class="mary-3 row">
 	<div class="col12 border-primary">
-		<div class="col4" onclick="location.href='https://github.com/OSMNames/OSMNames/releases/download/v2.0.1/planet-latest_geonames.tsv.gz'">
+		<div class="col4" onclick="location.href='https://github.com/OSMNames/OSMNames/releases/download/v2.0.3/planet-latest_geonames.tsv.gz'">
 			<b class="big">Full Planet</b>
 		</div>
 		<div class="col2" onclick="location.href='https://github.com/OSMNames/OSMNames/releases/download/v1.1/planet-latest.tsv.gz'">
 			1.7 GB
 		</div>
 		<div class="col6 clipboard center">
-			<input id="world" class="clipboard-input" value="https://github.com/OSMNames/OSMNames/releases/download/v2.0.1/planet-latest_geonames.tsv.gz">
+			<input id="world" class="clipboard-input" value="https://github.com/OSMNames/OSMNames/releases/download/v2.0.3/planet-latest_geonames.tsv.gz">
 			<button class="btn clipboard-button" data-clipboard-target="#world" onclick="setHint(this, 'Copied!')" onmouseout="setHint(this, 'Copy to clipboard')">
 			    Copy
 			</button>
