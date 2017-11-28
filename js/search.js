@@ -17,6 +17,9 @@ var search = function () {
     document.getElementById('banner').style.display = 'none';
     document.getElementsByClassName('ac-renderer')[0].className = 'ac-renderer founded';
 
+    if (item.boundingbox[0] > item.boundingbox[2]) {
+      item.boundingbox[0] -= 360;
+    }
     var isDegenerate = (item.boundingbox[2] - item.boundingbox[0]) * (item.boundingbox[3] - item.boundingbox[1]) <= 0;
     var extent = ol.extent.applyTransform(item.boundingbox, ol.proj.getTransform('EPSG:4326', 'EPSG:3857'));
 
