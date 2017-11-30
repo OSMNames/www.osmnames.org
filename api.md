@@ -8,12 +8,11 @@ You can try the search system in your own project right now!
 The OSMNames open-source project provides raw place data in an easy-to-index form.
 Klokan Technologies GmbH team has developed a basic search system providing responses for queries in a form of structured JSON data.
 
-## Autocomplete REST API
-
 ### Get your free key
 
-Free keys and service is available in administration at [www.tilehosting.com](www.tilehosting.com). You can log in there, get key and see more examples on [admin.tilehosting.com/geocoding/](admin.tilehosting.com/geocoding/)
+Free keys and service is available in administration at [www.tilehosting.com](https://www.tilehosting.com). You can log in there, get key and see more examples on [admin.tilehosting.com/geocoding/](https://admin.tilehosting.com/geocoding/)
 
+## Autocomplete REST API
 
 ### Search for autocomplete
 
