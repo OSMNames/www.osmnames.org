@@ -5,8 +5,8 @@ var search = function () {
   });
 
   var map = new kt.VectorMap(
-          'https://klokantech.tilehosting.com/styles/basic.json?key=tX0QWNRowlarrQpqxngS',
-          'https://klokantech.tilehosting.com/styles/basic/rendered.json?key=tX0QWNRowlarrQpqxngS',
+          'https://maps.tilehosting.com/styles/bright/style.json?key=IKz8rAERFMVoK4r6raKw',
+          'https://maps.tilehosting.com/styles/bright.json?key=IKz8rAERFMVoK4r6raKw',
           'map-ol', 'map-gl').getMap();
   var autocomplete = new kt.OsmNamesAutocomplete('search', undefined, 'dgb7TgC5zR0YpsAqbEgb', true);
 
