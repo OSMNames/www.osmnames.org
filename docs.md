@@ -21,7 +21,7 @@ In both cases - you can easily replace the sample data with your own file `data.
 
 ```
 docker run -d \
-    -v /path/to/folder/data.tsv:/data/input/ \
+    -v /path/to/folder/data.tsv:/data/input/data.tsv \
     -p 80:80 \
     klokantech/osmnames-sphinxsearch
 ```
