@@ -4,6 +4,9 @@ permalink: pretty
 
 baseurl: ""
 
+maps:
+  key: UFirA1lr6QcukgLJpmKq
+
 sass:
   style: :compressed
   sass_dir: styles/_sass

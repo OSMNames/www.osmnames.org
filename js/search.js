@@ -1,12 +1,12 @@
-var search = function () {
+var search = function (key) {
   var detailsEl = document.getElementById('details');
   var feature = new ol.Feature({
     geometry: new ol.geom.Polygon([])
   });
 
   var map = new kt.VectorMap(
-          'https://maps.tilehosting.com/styles/bright/style.json?key=IKz8rAERFMVoK4r6raKw',
-          'https://maps.tilehosting.com/styles/bright.json?key=IKz8rAERFMVoK4r6raKw',
+          'https://maps.tilehosting.com/styles/bright/style.json?key=' + key,
+          'https://maps.tilehosting.com/styles/bright.json?key=' + key,
           'map-ol', 'map-gl').getMap();
   var autocomplete = new kt.OsmNamesAutocomplete('search', undefined, 'dgb7TgC5zR0YpsAqbEgb', true);
 
