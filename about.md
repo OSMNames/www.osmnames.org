@@ -23,7 +23,7 @@ This initial release of OSMNames project provides only place names for a basic s
 
 An enhancement with complete postal addresses (house numbers and zip codes) is also possible but will need futher research.
 
-Right now, the data is always pre-generated to simplify deployment and scalability. The same fulltext search indexing system and ranking could alsoe be used against a PostgreSQL with nearly live updates.
+Right now, the data is always pre-generated to simplify deployment and scalability. The same fulltext search indexing system and ranking could also be used against a PostgreSQL database with nearly live updates.
 
 ## Community
 
