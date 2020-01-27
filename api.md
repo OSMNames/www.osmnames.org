@@ -8,10 +8,6 @@ You can try the search system in your own project right now!
 The OSMNames open-source project provides raw place data in an easy-to-index form.
 Klokan Technologies GmbH team has developed a basic search system providing responses for queries in a form of structured JSON data.
 
-### Get your free key
-
-Free keys and service is available in administration at [www.tilehosting.com](https://www.tilehosting.com). You can log in there, get key and see more examples on [admin.tilehosting.com/geocoding/](https://admin.tilehosting.com/geocoding/)
-
 ## Autocomplete REST API
 
 ### Search for autocomplete
@@ -46,8 +42,7 @@ You can easily create OSMNames autocomplete using the prepared JavaScript compon
     <input autocomplete="off" id="search" type="text" />
     <script>
       var autocomplete = new kt.OsmNamesAutocomplete(
-          'search', 'https://search.osmnames.org/', '{API_KEY}');
-      // Replace {API_KEY} with your own key
+          'search', 'https://api.yourdomain.com/');
 
       autocomplete.registerCallback(function(item) {
         alert(JSON.stringify(item, ' ', 2));
