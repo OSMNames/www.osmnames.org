@@ -24,3 +24,6 @@ go to directory and run
 jekyll serve
 ```
 Run ```http://localhost:4000``` in your browser.
+Contributors -  
+## Contributors 
+[Petr Sloup](https://github.com/petrsloup)
