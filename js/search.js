@@ -5,8 +5,8 @@ var search = function (key) {
   });
 
   var map = new kt.VectorMap(
-          'https://maps.tilehosting.com/styles/bright/style.json?key=' + key,
-          'https://maps.tilehosting.com/styles/bright.json?key=' + key,
+          'https://api.maptiler.com/maps/basic/style.json?key=' + key,
+          'https://api.maptiler.com/maps/basic/tiles.json?key=' + key,
           'map-ol', 'map-gl').getMap();
   var autocomplete = new kt.OsmNamesAutocomplete('search', undefined, 'dgb7TgC5zR0YpsAqbEgb', true);
 
