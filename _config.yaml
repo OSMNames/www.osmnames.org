@@ -4,6 +4,10 @@ permalink: pretty
 
 baseurl: ""
 
+url: "https://www.osmnames.org"
+plugins:
+  - jekyll-sitemap
+
 maps:
   key: BGkU8B3hfOMkm0UfV0rG
 

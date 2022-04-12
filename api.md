@@ -1,12 +1,13 @@
 ---
 layout: page
-title: API
+title: Geocoding API description
+description: Description and code sample with a snippet for OSMNames geocoding. Nominatim compatible API with autocomplete JavaScript component available via REST API.
 ---
 
-You can try the search system in your own project right now!
+You can try the search system in your project right now!
 
 The OSMNames open-source project provides raw place data in an easy-to-index form.
-Klokan Technologies GmbH team has developed a basic search system providing responses for queries in a form of structured JSON data.
+The MapTiler team has developed a basic search system providing responses for queries in the form of structured JSON data.
 
 ## Autocomplete REST API
 
@@ -22,11 +23,11 @@ This endpoint returns 20 results matching the `<query>`.
 
 This endpoint returns 20 results matching the `<query>` within a specific country, identified by the `<country_code>` (lowercase ISO 3166 Alpha-2 code).
 
-The JavaScript Autocomplete components submitting AJAX queries to the server is open-source as well.
+The JavaScript Autocomplete component submitting AJAX queries to the server is open-source as well.
 
 ## Nominatim compatible API
 
-The open-source OSMNames SphinxSearch system comes with an (incomplete implementation) of the API compatible with Nominatim, to simplify migration of the existing web and mobile clients.
+The open-source OSMNames SphinxSearch system comes with an (incomplete implementation) of the API compatible with Nominatim: to simplify migration of the existing web and mobile clients.
 
 ## Autocomplete JavaScript component
 
@@ -52,8 +53,6 @@ You can easily create OSMNames autocomplete using the prepared JavaScript compon
 </html>
 {% endhighlight %}
 
-## Install the API server on your own computer
+## Geocoding on-premises: install the API server on your computer
 
 Please follow the tutorial in the [Documentation](http://osmnames.org/docs/) section.
-
-Contact us if you are interested in a production deployment of the open source stack on your own hardware infrastructure.

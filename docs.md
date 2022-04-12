@@ -1,11 +1,12 @@
 ---
 layout: page
-title: Documentation
+title: Documentation for geocoding on-premises
+description: Learn how to install OSMNames geocoding project on-premises and how to generate your own data from the OpenStreetMap database.
 ---
 
 The following tutorials explain how you can use the OSMNames project. Feel free to submit [an issue](https://github.com/osmnames/osmnames/issues) if you think something is missing or does not run as it should.
 
-# Install the OSMNames Search on your computer
+## Install the OSMNames Search on your computer
 
 The fastest way how to run the OSMNames geocoding service on your computer is to use Docker, which provides a container with all the software components installed in Debian and already configured.
 
@@ -54,13 +55,13 @@ docker run -d -v /path/to/folder/:/data/ -p 80:80 klokantech/osmnames-sphinxsear
 ```
 or from Kitematic.
 
-If you are not familiar with the docker and you want to directly install the project on Linux, then you can do that too of course.
-The main search system is written in python (Flask) and requires the search engine (SphinxSearch). A step-by-step setup for Debian can be found here [here](https://github.com/klokantech/osmnames-sphinxsearch/blob/master/Dockerfile).
+You can install the project directly on Linux if you are not familiar with Docker.
+The main search system is written in Python (Flask) and requires the search engine (SphinxSearch). You can find a step-by-step setup for Debian [here](https://github.com/klokantech/osmnames-sphinxsearch/blob/master/Dockerfile).
 
-# Generate the data from raw OSM data
+## Generate the data from raw OSM data
 
-You can always [download](http://osmnames.org/download/) the prepared world data and filter it for your needs.
+You can always [download](http://osmnames.org/download/) the prepared world data from OpenStreetMap and filter it for your needs.
 
-In case you want to improve, modify, regenerate or extend the data by yourself, you are welcome to do that.
+In case you want to improve, modify, regenerate, or extend the data by yourself, you are welcome to do that.
 
 The whole process is described in the manual available at [http://osmnames.readthedocs.io/](http://osmnames.readthedocs.io/) and in the [Getting started](https://github.com/OSMNames/OSMNames#get-started) section in the README.md.

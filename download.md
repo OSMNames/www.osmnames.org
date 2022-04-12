@@ -1,12 +1,13 @@
 ---
 layout: page
-title: Download
+title: Download free data and software for geocoding
+description: Get data of the entire world, selected country, or an area defined by a bounding box in a format ready for geocoding. For free!
 ---
 
-## Data
+## Download data
 
 Here you can download the pre-generated data with over 21 million place names for the whole planet.
-Feel free to use it in your next project, your website, company product or just for your private research.
+Feel free to use it in your next project, your website, your company product, or just for your private research.
 
 The file is available under the [Open Database License](https://tldrlegal.com/license/odc-open-database-license-(odbl)), the same license as the original [OpenStreetMap](https://www.openstreetmap.org/copyright) data.
 
@@ -42,7 +43,7 @@ $ zcat planet-latest.tsv.gz | awk -F '\t' -v OFS='\t' 'NR == 1 || $16 == "ch"' >
 ```
 
 Where "ch" is the 2 letter country code according to ISO-3166, in this case for Switzerland.
-Similarly, it is possible to extract only records of certain types or classes, as well as setting a filter on another column.
+Similarly, it is possible to extract only records of certain types or classes and set a filter on another column.
 
 
 ## Data extract by bounding box
@@ -59,7 +60,7 @@ To find the relevant bounds check the [Bounding box tool](http://boundingbox.klo
 
 ## Data format details
 
-The data is generated in the TSV format, which is a tab separated spreadsheet file with one record per row. The first row contains the name of the columns. All characters are utf-8 encoded. The files distributed with a release are compressed using gzip. We suggest you to use gunzip or zcat to extract the raw text.
+The data is generated in the TSV format, a tab-separated spreadsheet file with one record per row. The first row contains the name of the columns. All characters are UTF-8 encoded. The files distributed with a release are compressed using gzip. We suggest using gzip or zcat to extract the raw text.
 
 The columns have a fixed order:
 
@@ -77,8 +78,8 @@ importance			importance [0.0-1.0] depending on wikipedia if available otherwise 
 street 				
 city
 county
-state	
-country	
+state
+country
 country_code		ISO-3166 2 letter country code
 display_name		the display name representing the hierarchy
 west				bbox
@@ -89,8 +90,8 @@ wikidata			the wikidata associated with this feature
 wikipedia 			the wikipedia URL associated with this feature
 ```
 
-# Software
+# Download geocoding software
 
 The open-source code for generating the data is available in the repository <a href="https://github.com/osmnames/osmnames">https://github.com/osmnames/osmnames</a>
 
-The Place Search API used in this website is implemented with the open-source project available at <a href="https://github.com/klokantech/osmnames-sphinxsearch">https://github.com/klokantech/osmnames-sphinxsearch</a>.
+The Place Search API used on this website is implemented with the open-source project available at <a href="https://github.com/klokantech/osmnames-sphinxsearch">https://github.com/klokantech/osmnames-sphinxsearch</a>.

@@ -19,11 +19,6 @@ h2#data {
   padding-bottom: 11px;
 }
 @media only screen and (max-width: $sc-small) {
-  p {
-    font-size: ($font-size * 0.875);
-  }
-}
-@media only screen and (max-width: $sc-small) {
   img {
 	width: 90%;
   }
@@ -52,7 +47,7 @@ body.home{
     }
 
     &.large{
-      height: 600px;
+      height: 750px;
     }
   }
 
@@ -152,8 +147,8 @@ body.home{
     z-index: 105;
     margin-top: -140px;
 
-    h1, h2{
-      text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+    h1, h2, p{
+      text-shadow: 0 0 3px rgba(0, 0, 0, 1);
       color: #fff;
     }
   }
