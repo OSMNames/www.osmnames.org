@@ -8,6 +8,12 @@ url: "https://www.osmnames.org"
 plugins:
   - jekyll-sitemap
 
+defaults:
+  - scope:
+      path: 'styles/'
+    values:
+      sitemap: false
+
 maps:
   key: BGkU8B3hfOMkm0UfV0rG
 
