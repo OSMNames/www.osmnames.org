@@ -22,6 +22,8 @@ The OSMNames data set was optimized and tested to feed the place search system o
 
 ## Existing limits and future development
 
+Are you in need of a **complete search engine** that includes geographic locations like lakes, mountains, points of interest (POIs), zip codes, postal addresses, etc? Use the **[geocoding API](https://www.maptiler.com/cloud/geocoding/)** or incorporate the **[Geocoding Control](https://docs.maptiler.com/sdk-js/modules/geocoding/)** into your web applications effortlessly. This can be done using vanilla JS, React, Svelte, and your preferred map library such as MapTiler SDK JS, Leaflet, OpenLayers, or MapLibre GL JS.
+
 This initial release of the OSMNames project provides only place names for a basic search of street names, towns, cities, and other administrative units. It can be extended in the future with other place types like lakes, mountain names, and even POIs.
 
 An enhancement with complete postal addresses (house numbers and zip codes) is also possible but will need further research.
